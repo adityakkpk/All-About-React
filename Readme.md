@@ -1,4 +1,4 @@
-# Day 1 - Started Learning React
+# Day 0 - Started Learning React
 
 1. Know about the history of React.
 2. How it is created?
@@ -6,7 +6,7 @@
 4. Why to use React?
 5. React is a Library.
 
-# Day 2 - Create React App
+# Day 1 - Create React App
 
 * Creating React app using the below command
 
@@ -21,3 +21,19 @@ the upper command is very slow so will use some utiliy bundlers like vite or par
 * Compared Both the React apps 
 
 * Understood File structures and Cleaning the file structure
+
+# Day 2 - Understand the react flow and structure
+
+* React, ReactDOM and React-native
+    - ReactDOM is an implementation of react on web
+    - React-native is an implementation of react on mobile apps
+
+* Project Structure
+
+* Analysing the Basic React app
+
+* Analysing the Vite React app
+
+* Best Practices : 
+    - Components name and File name should be Capitalized
+    - If a function is returning JSX then the file name should be in JSX (it depends on the Libraries)
