@@ -2,10 +2,13 @@ import Chai from "./Chai.jsx"
 
 function App() {
 
+  const username = 'aditya'
+
   return (
     <>
       <Chai/>
-      <h1>JSX only returns one element</h1>
+      <h1>Hiii {username}!</h1>
+      {/* {username} ;- It is a evealuated expression */}
     </>
   )
 }

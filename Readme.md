@@ -37,3 +37,11 @@ the upper command is very slow so will use some utiliy bundlers like vite or par
 * Best Practices : 
     - Components name and File name should be Capitalized
     - If a function is returning JSX then the file name should be in JSX (it depends on the Libraries)
+
+# Day 3 - Creating own React library and JSX
+
+* Creating our own React App.
+
+* Evaluated Expressions to inject variables in JSX.
+
+* Explored the React Library code on Github.
