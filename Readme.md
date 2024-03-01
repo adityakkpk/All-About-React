@@ -45,3 +45,11 @@ the upper command is very slow so will use some utiliy bundlers like vite or par
 * Evaluated Expressions to inject variables in JSX.
 
 * Explored the React Library code on Github.
+
+# Day 4 - Why you need hooks in project
+
+* Creating a new counter app using Vite
+
+* Understanding Why to use Hooks and How to use it?
+
+* How states updated in React.
