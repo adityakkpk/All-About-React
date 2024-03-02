@@ -53,3 +53,19 @@ the upper command is very slow so will use some utiliy bundlers like vite or par
 * Understanding Why to use Hooks and How to use it?
 
 * How states updated in React.
+
+# Day 5 - Virtual DOM, Fibre and Reconciliation
+
+* What CreateRoot method does Behind the scene :
+    - It creates DOM Like Structure and update only those things which are updated in UI. But Browser removes all the DOM and repaint new DOM, this is known sa Realoading in Browser.
+
+* What is Virtual DOM: 
+    - In Virtual DOM you can track tree like structure and find those values which are changed, remove them from DOM and repaint them.
+
+* React Fiber Algorithm: 
+    - Article Link : https://github.com/acdlite/react-fiber-architecture
+
+    - Reconcilliation: It is the algorithm behind what is popularly understood as the "Virtual-DOM".
+
+* Why to use Keys.
+    - To improve list's performance in React in new Fiber algorithm.
