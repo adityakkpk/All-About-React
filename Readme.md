@@ -74,3 +74,6 @@ the upper command is very slow so will use some utiliy bundlers like vite or par
 
 * Configure Tailwind CSS in React
 
+* Props: 
+    - Props made components reusable
+
