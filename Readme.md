@@ -77,3 +77,22 @@ the upper command is very slow so will use some utiliy bundlers like vite or par
 * Props: 
     - Props made components reusable
 
+
+## Day 7 - A React Interview Question on Counter
+
+* What will happen in below situation:
+
+```
+setCounter(counter + 1)
+setCounter(counter + 1)
+setCounter(counter + 1)
+setCounter(counter + 1)
+setCounter(counter + 1)
+```
+    - In this senario React's fiber algorithum will create a batch for all the 5 function. And these function will update the same same counter value.
+
+* To update count valu in each setCount() we can use callback function to update counter variable :
+
+```
+setCounter((counter) => counter+1)
+```

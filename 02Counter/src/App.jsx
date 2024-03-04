@@ -5,7 +5,7 @@ function App() {
 
   // useState is a method which returns an array which has a variable and a function
   // Here, counter is a variable and setcounter is a function which is return in an array by useState()
-  let [counter, setCounter] = useState(5);
+  const [counter, setCounter] = useState(5);
 
   // let counter = 5;
 
@@ -13,8 +13,17 @@ function App() {
     if(counter >= 20){
       setCounter(20);
     }else {
-      counter = counter + 1;
-      setCounter(counter)
+      /**
+       * In this senario React's fiber algorithum will create a batch for all the 5 function. And these function will update the same same counter value.
+       */
+      setCounter(counter + 1)
+      setCounter(counter + 1)
+      setCounter(counter + 1)
+      setCounter(counter + 1)
+      // To update count valu in each setCount() we can use callback function to update counter variable
+      setCounter((prevCounter) => prevCounter+1)
+      setCounter((prevCounter) => prevCounter+1)
+      setCounter((prevCounter) => prevCounter+1)
     }
   }
   
@@ -22,8 +31,7 @@ function App() {
     if(counter <= 0) {
       setCounter(0);
     }else {
-      counter = counter - 1;
-      setCounter(counter)
+      setCounter(counter - 1)
     }
   }
 
@@ -32,10 +40,10 @@ function App() {
       <h1>Chai aur React</h1>
       <h2>Counter Value: {counter}</h2>
 
-      <button onClick={handleIncrease}>Increase</button>
+      <button onClick={handleIncrease}>Increase {counter}</button>
       <br />
       <br />
-      <button onClick={handleDecrease}>Decrease</button>
+      <button onClick={handleDecrease}>Decrease {counter}</button>
     </>
   )
 }
