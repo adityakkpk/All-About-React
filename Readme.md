@@ -96,3 +96,7 @@ setCounter(counter + 1)
 ```
 setCounter((counter) => counter+1)
 ```
+
+## Day 8 - Building a react project
+
+* Building a Background Changer Application in React
