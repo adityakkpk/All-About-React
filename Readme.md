@@ -100,3 +100,8 @@ setCounter((counter) => counter+1)
 ## Day 8 - Building a react project
 
 * Building a Background Changer Application in React
+
+## Day 9 - useEffect, useRef and useCallback with 1 project
+
+* Build a password generator in react.
+* Understand some hooks like useCallback, useRef and useEffect in React.
