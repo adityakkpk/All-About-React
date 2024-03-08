@@ -105,3 +105,12 @@ setCounter((counter) => counter+1)
 
 * Build a password generator in react.
 * Understand some hooks like useCallback, useRef and useEffect in React.
+
+## Day 10 - Custom hooks in react | currency Project
+
+* Building a currency converter in Racat
+* Understanding the concept of APIs
+* Understanding and Creating custom hooks in React
+
+* Best Practice
+    - Remember the key in loops in React.
