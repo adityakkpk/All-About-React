@@ -9,6 +9,7 @@ function App() {
   //useRef hook
   const passwordRef = useRef(null);
 
+  //useCallback hook
   const passwordGenerator = useCallback(()=>{
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -27,15 +28,17 @@ function App() {
 
   }, [length, numAllowed, charAllowed, setPassword])
 
-  useEffect(()=>{
-    passwordGenerator()
-  }, [length, numAllowed, charAllowed, passwordGenerator])
-
   const copyPasswordToClip = useCallback(()=>{
     passwordRef.current?.select();
     // passwordRef.current?.setSelectionRange(0,3);
     window.navigator.clipboard.writeText(password);
   }, [password])
+  
+  // useEffect hook
+  useEffect(()=>{
+    passwordGenerator()
+  }, [length, numAllowed, charAllowed, passwordGenerator])
+
 
   return (
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 text-orange-500 bg-gray-700 pb-4">
