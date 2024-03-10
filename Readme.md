@@ -114,3 +114,12 @@ setCounter((counter) => counter+1)
 
 * Best Practice
     - Remember the key in loops in React.
+
+## Day 11 - React router with a project
+ 
+* Installtion command for React-router
+> npm install react-router-dom
+
+* 'Link' tag in React-router Dom is used at the place of 'a' tag because a tag refeshes the page where as in react page should not refresh when we click on the link. So we use 'Link' tag in React.
+
+* 'NavLink' tag in React-router Dom provide some additional features like "isActive"
