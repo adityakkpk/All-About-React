@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { InputBox } from "./components";
+import bgImg from "./assets/chai.jpg"
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
 
 function App() {
@@ -28,11 +29,14 @@ function App() {
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
       style={{
-        backgroundImage: `url('https://images.pexels.com/photos/904735/pexels-photo-904735.jpeg?auto=compress&cs=tinysrgb&w=600')`,
+        backgroundColor: "#ffd6ff"
       }}
     >
-      <div className="w-full">
-        <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+      <div className="w-full flex justify-center items-center">
+        <div className="h-[90vh] w-[30%] mx-auto rounded-xl overflow-hidden">
+          <img src={`${bgImg}`} className="h-full w-full" />
+        </div>
+        <div className="w-[60%] max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-black/40">
           <form
             onSubmit={(e) => {
               e.preventDefault();
