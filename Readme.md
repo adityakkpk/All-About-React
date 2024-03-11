@@ -123,3 +123,5 @@ setCounter((counter) => counter+1)
 * 'Link' tag in React-router Dom is used at the place of 'a' tag because a tag refeshes the page where as in react page should not refresh when we click on the link. So we use 'Link' tag in React.
 
 * 'NavLink' tag in React-router Dom provide some additional features like "isActive"
+
+* useLoaderdata, useParams hook in React-Router-Dom
