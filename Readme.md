@@ -60,7 +60,7 @@ the upper command is very slow so will use some utiliy bundlers like vite or par
     - It creates DOM Like Structure and update only those things which are updated in UI. But Browser removes all the DOM and repaint new DOM, this is known sa Realoading in Browser.
 
 * What is Virtual DOM: 
-    - In Virtual DOM you can track tree like structure and find those values which are changed, remove them from DOM and repaint them.
+    - In Virtual DOM you can track tree like structure and find those values/elements which are changed, remove them from DOM and repaint them.
 
 * React Fiber Algorithm: 
     - Article Link : https://github.com/acdlite/react-fiber-architecture
