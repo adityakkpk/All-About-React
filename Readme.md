@@ -125,3 +125,11 @@ setCounter((counter) => counter+1)
 * 'NavLink' tag in React-router Dom provide some additional features like "isActive"
 
 * useLoaderdata, useParams hook in React-Router-Dom
+
+---
+## Day 12 - Context API crash course with 2 projects
+
+* To handle Prop Drilling in React we use Context API.
+* Context API is only related to only react but this problem is also in outside of react, to tackal those problems we have 'Redux' which manage state related problems.
+* redux is a state management library. It easier virsion is react-toolkit(RTK).
+* Redux is a stand alone library to use it into react we have 'react-redux'.
