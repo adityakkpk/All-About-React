@@ -130,6 +130,8 @@ setCounter((counter) => counter+1)
 ## Day 12 - Context API crash course with 2 projects
 
 * To handle Prop Drilling in React we use Context API.
+* Context API is like a global variable where all the data will store.
+* Acoording to the uppers statement, we can create a global variable file(global.js) and use it accordingly. This senario will lead to a problem that if data changes at any place it will change at every place. This will lead to a state missmatch problem and this is the problem which react is trying to solve.
 * Context API is only related to only react but this problem is also in outside of react, to tackal those problems we have 'Redux' which manage state related problems.
 * redux is a state management library. It easier virsion is react-toolkit(RTK).
 * Redux is a stand alone library to use it into react we have 'react-redux'.
