@@ -135,3 +135,5 @@ setCounter((counter) => counter+1)
 * Context API is only related to only react but this problem is also in outside of react, to tackal those problems we have 'Redux' which manage state related problems.
 * redux is a state management library. It easier virsion is react-toolkit(RTK).
 * Redux is a stand alone library to use it into react we have 'react-redux'.
+
+* Remember to change tailwind config file for project2(themeSwitcher)
