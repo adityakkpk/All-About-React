@@ -130,6 +130,7 @@ setCounter((counter) => counter+1)
 ## Day 12 - Context API crash course with 2 projects
 
 * To handle Prop Drilling in React we use Context API.
+* It is directly available in react as a hooks as API format.
 * Context API is like a global variable where all the data will store.
 * Acoording to the uppers statement, we can create a global variable file(global.js) and use it accordingly. This senario will lead to a problem that if data changes at any place it will change at every place. This will lead to a state missmatch problem and this is the problem which react is trying to solve.
 * Context API is only related to only react but this problem is also in outside of react, to tackal those problems we have 'Redux' which manage state related problems.
@@ -137,3 +138,11 @@ setCounter((counter) => counter+1)
 * Redux is a stand alone library to use it into react we have 'react-redux'.
 
 * Remember to change tailwind config file for project2(themeSwitcher)
+
+---
+## Day 13 - Context api with local storage
+
+* Context API wuth another project Todo List.
+
+* Why do we create index file ?
+    - Add all the imports in it. If we need to import multiple functionalities we can import them from one place which is this index file.
