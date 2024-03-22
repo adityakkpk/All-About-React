@@ -146,3 +146,41 @@ setCounter((counter) => counter+1)
 
 * Why do we create index file ?
     - Add all the imports in it. If we need to import multiple functionalities we can import them from one place which is this index file.
+
+## Day 14 - Redux toolkit crash course
+
+* **Redux**
+    - It is a state management library.
+    - It is an independent library for state management.
+    - To use Redux in React, there is a library called react-redux.
+    - Setup of redux in projects takes too much time, so to reduce this time span react-toolkit was developed.
+
+* **Redux-Toolkit**
+    - It is a successor of Redux.
+    - It has battrees in it.
+    - It has more abstraction.
+    - It has some built-in middlewares.
+
+* **Important Cocepts**
+    1) **Store**
+        - It is place from where we store all the data variablea.
+        - It is also known as Single-Source of Truth.
+    2) **Reducer**
+        - If you want to change something in store, then we use Reducers.
+        - Reducesrs are objects.
+    3) **useSelector Method**
+        - It is used when you want to select a value from the store.
+    4) **useDispatch Method**
+        - It is used when you want to send a value.
+
+* **Methods to create Store**
+    - **Step 1** - import 'configureStore' from redux-toolkit
+    - **Step 2** - Create Reducers : 
+
+            > 1. Import 'createSlice' from redux-toolkit
+            > 2. Create an initiaState.
+            > 3. Create a Slice/Reducer using createSlice method and export the slice.
+            > 4. If you have created some individual properties and you want to export them, then export them.
+            > 5. At last default export the your_silce.reducer  
+            
+    - **Step 3** - Import the reducer and pass it into the configureStore method.
