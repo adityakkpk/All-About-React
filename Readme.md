@@ -127,6 +127,7 @@ setCounter((counter) => counter+1)
 * useLoaderdata, useParams hook in React-Router-Dom
 
 ---
+
 ## Day 12 - Context API crash course with 2 projects
 
 * To handle Prop Drilling in React we use Context API.
@@ -140,12 +141,15 @@ setCounter((counter) => counter+1)
 * Remember to change tailwind config file for project2(themeSwitcher)
 
 ---
+
 ## Day 13 - Context api with local storage
 
 * Context API wuth another project Todo List.
 
 * Why do we create index file ?
     - Add all the imports in it. If we need to import multiple functionalities we can import them from one place which is this index file.
+
+---
 
 ## Day 14 - Redux toolkit crash course
 
@@ -186,3 +190,11 @@ setCounter((counter) => counter+1)
             > 5. At last default export the your_silce.reducer  
             
     - **Step 3** - Import the reducer and pass it into the configureStore method.
+
+---
+
+## Day 15 - Talked about Mega Project
+
+* Choice for Mega Project 1) Easy Way 2) Hard Way
+
+    - Will Take Hard Way :).
