@@ -198,3 +198,9 @@ setCounter((counter) => counter+1)
 * Choice for Mega Project 1) Easy Way 2) Hard Way
 
     - Will Take Hard Way :).
+---
+
+## Day 16 - Our mega project in React | The hard way
+
+* Project Introduction
+    - Basic Blog website with login and signup fuctionalities.
