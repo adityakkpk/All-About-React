@@ -204,3 +204,14 @@ setCounter((counter) => counter+1)
 
 * Project Introduction
     - Basic Blog website with login and signup fuctionalities.
+---
+
+## Day 17 - Appwrite backend for react project
+
+In mega project we are going to create a full flrdge working Application. But the problem is that, React is a frontend library and we cannot handle bcakend from it. So for the implementation of Backend we will uee some services like Appwrite. 
+
+And we will also use some more opensource libraries like TinyMCE, html-react-parser, React Hook Form etc.
+
+* **Appwrite**
+    - Appwrite is a Backend as a service.
+    - Appwrite is a servise proider which provides the backend servise for your Application.
