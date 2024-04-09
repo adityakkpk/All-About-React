@@ -208,10 +208,29 @@ setCounter((counter) => counter+1)
 
 ## Day 17 - Appwrite backend for react project
 
-In mega project we are going to create a full flrdge working Application. But the problem is that, React is a frontend library and we cannot handle bcakend from it. So for the implementation of Backend we will uee some services like Appwrite. 
+In mega project we are going to create a full-fledge working Application. But the problem is that, React is a frontend library and we cannot handle backend from it. So for the implementation of Backend we will ues some services like Appwrite. 
 
 And we will also use some more opensource libraries like TinyMCE, html-react-parser, React Hook Form etc.
 
 * **Appwrite**
     - Appwrite is a Backend as a service.
     - Appwrite is a servise proider which provides the backend servise for your Application.
+---
+
+## Day 18 - ENV and Appwrite in React project
+
+* Created a new react app using vite
+
+* Download all the required dependencies bu using follownig command:
+``` javascript
+ npm i @reduxjs/toolkit react-redux react-router-dom appwrite @tinymce/tinymce-react html-react-parser react-hook-form
+```
+* **Environment Variables**
+    - Why?
+        - As we all know that react is a frontend library and everything we write in react it sheeped to Javascript in Browser. To access the database we use some id and password which we don't want to be shared so to protect these secret info we use Environment Variables.
+    
+    - Always create environment variables into the root of your project.
+
+    - Creating and Accessing environtment variable
+        - If you are creating react application using 'create react app' then you have to save the variable with having name like 'REACT_APP_NOT_SECRET_CODE' and it will be accesed by using 'process.env.REACT_APP_NOT_SECRET_CODE'.
+        - If you are creating react application using 'create vite@lates' then you have to save the variable with having name like 'VITE_SECRET_CODE' and it will be accesed by using 'import.meta.env.VITE_SECRET_CODE'.
