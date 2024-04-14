@@ -221,7 +221,7 @@ And we will also use some more opensource libraries like TinyMCE, html-react-par
 
 * Created a new react app using vite
 
-* Download all the required dependencies bu using follownig command:
+* Download all the required dependencies by using follownig command:
 ``` javascript
  npm i @reduxjs/toolkit react-redux react-router-dom appwrite @tinymce/tinymce-react html-react-parser react-hook-form
 ```
@@ -234,3 +234,75 @@ And we will also use some more opensource libraries like TinyMCE, html-react-par
     - Creating and Accessing environtment variable
         - If you are creating react application using 'create react app' then you have to save the variable with having name like 'REACT_APP_NOT_SECRET_CODE' and it will be accesed by using 'process.env.REACT_APP_NOT_SECRET_CODE'.
         - If you are creating react application using 'create vite@lates' then you have to save the variable with having name like 'VITE_SECRET_CODE' and it will be accesed by using 'import.meta.env.VITE_SECRET_CODE'.
+---
+
+## Day 19 - Build authentication service with appwrite
+
+* Build authentication service for appwrite
+
+``` javascript
+
+import conf from '../conf.js'
+import { Client, Account, ID} from "appwrite";
+
+export class AuthSevise {
+    client = new Client();
+    account;
+
+    constructor(){
+        this.client
+            .setEndpoint(conf.appwriteUrl)
+            .setProject(conf.appwriteProjectd);
+        this.account = new Account(this.client);
+    }
+
+    async createAccount({email, password, name}) {
+        try {
+            const userAccount = await this.account.create(ID.unique() ,email, password, name);
+            if(userAccount) {
+                // call another method
+                return this.login({email, password});
+            } 
+            else {
+                return userAccount;
+            }
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async login({email, password}){
+        try {
+            return await this.account.createEmailSession(email, password);
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async getCurrentUser() {
+        try {
+            return await this.account.get();
+        } catch (error) {
+            console.log("Appwrite service :: getCurrentUser :: error", error);
+        }
+        
+        return null;
+    }
+    
+    async logout() {
+        try {
+            await this.account.deleteSessions();
+        } catch (error) {
+            console.log("Appwrite service :: logout :: error", error);
+        }
+    }
+}
+
+const authService = new AuthSevise();
+
+export default authService;
+
+```
+---
+
+## Day 20 - 
