@@ -447,4 +447,6 @@ export default service
 ```
 ---
 
-## Day 21 - 
+## Day 21 - How to configure redux toolkit in big projects
+
+* Creat Store and Slice for authentication.
