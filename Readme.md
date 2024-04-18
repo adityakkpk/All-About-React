@@ -450,3 +450,12 @@ export default service
 ## Day 21 - How to configure redux toolkit in big projects
 
 * Creat Store and Slice for authentication.
+
+* Create Header and Footer Components 
+---
+
+## Day 22 - Production grade react components
+
+* Production Grade Header and Footer
+
+* Production Grade Button Designed
