@@ -60,15 +60,38 @@ the upper command is very slow so will use some utiliy bundlers like vite or par
     - It creates DOM Like Structure and update only those things which are updated in UI. But Browser removes all the DOM and repaint new DOM, this is known sa Realoading in Browser.
 
 * What is Virtual DOM: 
-    - In Virtual DOM you can track tree like structure and find those values/elements which are changed, remove them from DOM and repaint them.
+    - In Virtual DOM you can track tree like structure of HTML and find those values/elements which are changed, remove them from DOM and repaint them.
 
 * React Fiber Algorithm: 
     - Article Link : https://github.com/acdlite/react-fiber-architecture
 
-    - Reconcilliation: It is the algorithm behind what is popularly understood as the "Virtual-DOM".
+    - We've established that a primary goal of Fiber is to enable React to take advantage of scheduling. Specifically, we need to be able to
 
-* Why to use Keys.
+        - pause work and come back to it later.
+        - assign priority to different types of work.
+        - reuse previously completed work.
+        - abort work if it's no longer needed.
+    In order to do any of this, we first need a way to break work down into units. In one sense, that's what a fiber is. A fiber represents a unit of work.
+
+    (When dealing with UIs, the problem is that if too much work is executed all at once, it can cause animations to drop frames and look choppy. What's more, some of that work may be unnecessary if it's superseded by a more recent update. This is where the comparison between UI components and function breaks down, because components have more specific concerns than functions in general.)
+
+    - Reconcilliation: 
+        - The algorithum React uses to diff one tree with another to determine which part needs to be changed.
+        - It is the algorithm behind what is popularly understood as the "Virtual-DOM".
+        - When you render a React application, a tree of nodes that describes the app is generated and saved in memory. This tree is then flushed to the rendering environment — for example, in the case of a browser application, it's translated to a set of DOM operations. When the app is updated (usually via setState), a new tree is generated. The new tree is diffed with the previous tree to compute which operations are needed to update the rendered app.
+
+    - Reconcilliation vs Rendering
+        -React is designed so that reconciliation and rendering are separate phases. The reconciler does the work of computing which parts of a tree have changed; the renderer then uses that information to actually update the rendered app.
+
+* Why we should use Keys to render lists in React?
     - To improve list's performance in React in new Fiber algorithm.
+    - Different component types are assumed to generate substantially different trees. React will not attempt to diff them, but rather replace the old tree completely.
+    - Diffing of lists is performed using keys. Keys should be "stable, predictable, and unique."
+
+* The key points are:
+    - In a UI, it's not necessary for every update to be applied immediately; in fact, doing so can be wasteful, causing frames to drop and degrading the user experience.
+    - Different types of updates have different priorities — an animation update needs to complete more quickly than, say, an update from a data store.
+    - A push-based approach requires the app (you, the programmer) to decide how to schedule work. A pull-based approach allows the framework (React) to be smart and make those decisions for you.
 
 ## Day 6 - Tailwind and Props in ReactJs
 
@@ -94,7 +117,7 @@ setCounter(counter + 1)
 * To update count valu in each setCount() we can use callback function to update counter variable :
 
 ```
-setCounter((counter) => counter+1)
+setCounter((prevCounter) => counter+1)
 ```
 
 ## Day 8 - Building a react project
@@ -461,3 +484,4 @@ export default service
 * Production Grade Buttons, Inputs Designed (Common Button, Input filed)
 
 * forward hook of react is used, when we have created components for input field and using it for login page, then we need the access of states in login page also then we use this forward hook of react.
+---
