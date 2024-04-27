@@ -276,3 +276,9 @@ export default service
 * Created a Auth Layout. It is a mechanist that describes how can we protect pages and routes.
 
 * Resource for rejex: https://regexr.com/
+
+## Adding form and slug values
+
+* Created a RTE component using react-hook-form
+
+* Created a Posr Form component.

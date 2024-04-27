@@ -228,7 +228,7 @@ setCounter((prevCounter) => counter+1)
 
 ## Day 17 - Appwrite backend for react project
 
-In mega project we are going to create a full-fledge working Application. And for Backend we will ues some services like Appwrite. 
+* In mega project we are going to create a full-fledge working Application. And for Backend we will ues some services like Appwrite. 
 ---
 
 ## Day 18 - ENV and Appwrite in React project
@@ -272,3 +272,11 @@ In mega project we are going to create a full-fledge working Application. And fo
 * Made some more production level components.
 
 * Used React Hook form in Production.
+
+## Day 24 - Adding form and slug values
+
+* RTE -> Real time editor
+
+* designing React Hook Form for RTE
+
+* Slug Values
