@@ -281,4 +281,4 @@ export default service
 
 * Created a RTE component using react-hook-form
 
-* Created a Posr Form component.
+* Created a PostForm component. and Handling slugs.
