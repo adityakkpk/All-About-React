@@ -282,3 +282,9 @@ export default service
 * Created a RTE component using react-hook-form
 
 * Created a PostForm component. and Handling slugs.
+
+## Building pages | chai aur react
+
+* Create pages like AddPost, Addposts, Login, Signup etc..
+
+* Routing

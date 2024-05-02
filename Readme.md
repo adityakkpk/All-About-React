@@ -280,3 +280,9 @@ setCounter((prevCounter) => counter+1)
 * designing React Hook Form for RTE
 
 * Slug Values
+
+## Day 25 - Building pages | chai aur react
+
+* Create Pages like Signup, login etc...
+
+* Routing
