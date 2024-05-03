@@ -286,3 +286,9 @@ setCounter((prevCounter) => counter+1)
 * Create Pages like Signup, login etc...
 
 * Routing
+
+## Day 26 - CORS and debugging in React Project
+
+- Debugging and testing our project
+
+- CORS

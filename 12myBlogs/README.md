@@ -288,3 +288,7 @@ export default service
 * Create pages like AddPost, Addposts, Login, Signup etc..
 
 * Routing
+
+## CORS and debugging in React Project
+
+* Debugging the project

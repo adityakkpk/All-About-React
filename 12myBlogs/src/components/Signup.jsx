@@ -50,7 +50,7 @@ function Signup() {
                     <Input 
                         label="Full Name: "
                         placeholder="Enter your full name"
-                        {...register("Name", {
+                        {...register("name", {
                             required: true
                         })}
                     />

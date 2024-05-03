@@ -5,7 +5,7 @@ import appwriteService from '../../appwrite/config';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-function postForm({post}) {
+function PostForm({post}) {
     const {register, handleSubmit, watch, setValue, control, getValues} = useForm({
         defaultValues: {
             title: post?.title || '',
@@ -16,11 +16,12 @@ function postForm({post}) {
     });
 
     const navigate = useNavigate();
-    const userData = useSelector(state => state.user.userData)
+    const userData = useSelector((state) => state.auth.userData)
 
     const submit = async (data) => {
+        console.log({...data});
         if(post) {
-            const file = data.image[0] ? appwriteService.uploadFile(data.image[0]) : null ;
+            const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null ;
 
             if (file) {
                 appwriteService.deleteFile(post.featuredImage);
@@ -58,8 +59,8 @@ function postForm({post}) {
             return value
                 .trim()
                 .toLowerCase()
-                .replace(/^[a-zA-Z\d\s]+/g, '-')
-                .replace(/\s/g, '-')
+                .replace(/[^a-zA-Z\d\s]+/g, '-')
+                .replace(/\s/g, '-');
         }
 
         return '';
@@ -107,10 +108,10 @@ function postForm({post}) {
             <div className="w-1/3 px-2">
                 <Input 
                     label= 'Featured Image: '
-                    placeholder="file"
+                    type="file"
                     className="mb-4"
-                    {...register("image", {required: true})}
-                    accept= "image/png. image/jpg, image/jpeg, image/gif"
+                    accept= "image/png, image/jpg, image/jpeg, image/gif"
+                    {...register("image", {required: !post})}
                 />
 
                 {post && (
@@ -140,4 +141,4 @@ function postForm({post}) {
     )
 }
 
-export default postForm
+export default PostForm

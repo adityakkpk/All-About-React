@@ -9,7 +9,7 @@ import Button from './Button'
 import Signup from './Signup'
 import Login from './Login'
 import RTE from "./RTE"
-import postForm from './post-form/postForm'
+import PostForm from './post-form/PostForm.jsx'
 import AuthLayout from './AuthLayout'
 import Input from './Input'
 
@@ -26,6 +26,6 @@ export {
     Signup,
     Login,
     RTE,
-    postForm,
-    AuthLayout
+    PostForm,
+    AuthLayout,
 }
