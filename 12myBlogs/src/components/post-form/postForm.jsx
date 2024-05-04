@@ -9,7 +9,7 @@ function PostForm({post}) {
     const {register, handleSubmit, watch, setValue, control, getValues} = useForm({
         defaultValues: {
             title: post?.title || '',
-            slug: post?.slug || '',
+            slug: post?.id || '',
             content: post?.content || '',
             status: post?.status || 'active',
         }
@@ -19,7 +19,6 @@ function PostForm({post}) {
     const userData = useSelector((state) => state.auth.userData)
 
     const submit = async (data) => {
-        console.log({...data});
         if(post) {
             const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null ;
 
@@ -40,11 +39,9 @@ function PostForm({post}) {
 
             if (file){
                 const fileId = file.$id;
-                data.featuredImage = fileId
-                const dbPost = await appwriteService.createPost({
-                    ...data, 
-                    userId: userData.$id
-                });
+                data.featuredImage = fileId;
+
+                const dbPost = await appwriteService.createPost({...data, userId: userData.$id});
 
                 if(dbPost){
                     navigate(`/post/${dbPost.$id}`);
@@ -76,7 +73,7 @@ function PostForm({post}) {
         return () => {
             subscription.unsubscribe()
         }
-    }, [watch, slugTransform, setValue])
+    }, [watch, slugTransform, setValue]);
 
     return (
         <form onSubmit={handleSubmit(submit)} className='flex flex-wrap'>
@@ -93,7 +90,7 @@ function PostForm({post}) {
                     placeholder="Slug"
                     className="mb-4"
                     {...register("slug", {required: true})}
-                    onInput={ e => {
+                    onInput={ (e) => {
                         setValue("slug", slugTransform(e.currentTarget.value), {shouldValidate: true});
                     }}
                 />
@@ -117,7 +114,7 @@ function PostForm({post}) {
                 {post && (
                     <div className="w-full mb-4">
                         <img 
-                            src={appwriteService.getFilePreview(featuredImage)} 
+                            src={appwriteService.getFilePreview(post.featuredImage)} 
                             alt={post.title} 
                             className='rounded-lg'                     
                         />
