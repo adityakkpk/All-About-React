@@ -292,3 +292,9 @@ setCounter((prevCounter) => counter+1)
 - Debugging and testing our project
 
 - CORS
+
+## Day 27 - How to deploy react app to production
+
+* Push all tho code to a Separed Repo on GitHub.
+
+* Choose your publisher and deploy your application
