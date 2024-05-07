@@ -298,3 +298,7 @@ setCounter((prevCounter) => counter+1)
 * Push all tho code to a Separed Repo on GitHub.
 
 * Choose your publisher and deploy your application
+
+## day 28 - Assignments for your react course
+
+* Go to freeapi.app and use some backend and done some projects by yourself.
