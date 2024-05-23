@@ -6,7 +6,7 @@ import conf from '../conf/conf';
 export default function RTE({ name, control, label, defaultValue = "" }) {
   return (
     <div className="w-full">
-      {label && <label className="inline-block mb-1 pl-1">{label}</label>}
+      {label && <label className="inline-block mb-1 pl-1">{label} <p className="text-gray-600">(Content should be less than 255 characters.)</p> </label>}
 
       <Controller
         name={name || "content"}

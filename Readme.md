@@ -302,3 +302,6 @@ setCounter((prevCounter) => counter+1)
 ## day 28 - Assignments for your react course
 
 * Go to freeapi.app and use some backend and done some projects by yourself.
+
+## Day 29 - React series ends here
+---
