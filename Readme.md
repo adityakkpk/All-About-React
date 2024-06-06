@@ -305,3 +305,7 @@ setCounter((prevCounter) => counter+1)
 
 ## Day 29 - React series ends here
 ---
+
+## Day 30 - react interview questions
+* you don't need state for this
+* Testing datatype skills
