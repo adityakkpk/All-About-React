@@ -309,3 +309,8 @@ setCounter((prevCounter) => counter+1)
 ## Day 30 - react interview questions
 * you don't need state for this
 * Testing datatype skills
+---
+
+## Day 31 - Handle APIs like a pro in ReactJS | Custom React Query | Axios | Race condition
+
+- Avoiding Race Condition using Axios while handling the APIs.
