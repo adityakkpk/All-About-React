@@ -1,18 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from 'react';
 import './App.css'
 import AddTodo from './components/AddTodo'
 import Todos from './components/Todos'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+    const [input, setInput] = useState('');
+    const [isUpdating, setIsUpdating] = useState(false);
+    const [currentTodoId, setCurrentTodoId] = useState(null);
 
   return (
     <>
       <h1>Lear about Redux-Toolkit</h1>
-      <AddTodo />
-      <Todos />
+      <AddTodo input={input} setInput={setInput} isUpdating={isUpdating} currentTodoId={currentTodoId} />
+      <Todos setInput={setInput} setIsUpdating={setIsUpdating} setCurrentTodoId={setCurrentTodoId} />
     </>
   )
 }
